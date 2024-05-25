@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renting Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-container">
+            <h2>Login/Register</h2>
+            <form id="login-form">
+                <input type="text" id="firstName" placeholder="First name" required>
+                <input type="text" id="lastName" placeholder="Last name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="phone" placeholder="Phone number" required>
+                <div>
+                    <input type="radio" id="buyer" name="role" value="buyer" required>
+                    <label for="buyer">Buyer</label>
+                    <input type="radio" id="seller" name="role" value="seller" required>
+                    <label for="seller">Seller</label>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <div id="seller-container" style="display:none;">
+            <h2>Post a Property</h2>
+            <form id="post-property-form">
+                <input type="text" id="place" placeholder="Place" required>
+                <input type="text" id="area" placeholder="Area" required>
+                <input type="number" id="bedrooms" placeholder="Number of bedrooms" required>
+                <input type="number" id="bathrooms" placeholder="Number of bathrooms" required>
+                <input type="text" id="nearby" placeholder="Nearby hospitals & colleges" required>
+                <button type="submit">Post Property</button>
+            </form>
+            <h3>My Properties</h3>
+            <div id="my-properties"></div>
+            <button id="back-to-home">Back to Home</button>
+        </div>
+        <div id="buyer-container" style="display:none;">
+            <h2>View Properties</h2>
+            <input type="text" id="filter-place" placeholder="Filter by place">
+            <button id="apply-filters">Apply Filters</button>
+            <div id="property-list"></div>
+            <button id="back-to-home-buyer">Back to Home</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
